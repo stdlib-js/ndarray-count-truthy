@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-18)
+## Unreleased (2025-11-21)
 
 <section class="features">
 
@@ -32,6 +32,7 @@
 
 <details>
 
+-   [`67f4feb`](https://github.com/stdlib-js/stdlib/commit/67f4feb3b59fc5466e8302977634d3d5113467a8) - **style:** remove space _(by Athan Reines)_
 -   [`6f6da0a`](https://github.com/stdlib-js/stdlib/commit/6f6da0afaa12ef31691ae659f6a005f140d81cd1) - **fix:** add missing argument to format strings _(by Philipp Burckhardt)_
 -   [`63eaebc`](https://github.com/stdlib-js/stdlib/commit/63eaebc120e5588352cd7b78871eb5c1b736c9bc) - **docs:** update comment _(by Athan Reines)_
 -   [`c2369c2`](https://github.com/stdlib-js/stdlib/commit/c2369c2800eb0d8a3aaf6dd05ce6d31dc154398e) - **docs:** update examples _(by Athan Reines)_
