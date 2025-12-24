@@ -41,38 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-count-truthy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-countTruthy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-count-truthy@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var countTruthy = require( 'path/to/vendor/umd/ndarray-count-truthy/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-count-truthy@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.countTruthy;
-})();
-</script>
+var countTruthy = require( '@stdlib/ndarray-count-truthy' );
 ```
 
 #### countTruthy( x\[, options] )
@@ -88,10 +82,7 @@ var x = array( [ [ [ 1.0, 2.0 ] ], [ [ 3.0, 4.0 ] ], [ [ 0.0, 6.0 ] ] ] );
 
 // Perform reduction:
 var out = countTruthy( x );
-// returns <ndarray>
-
-var v = out.get();
-// returns 5
+// returns <ndarray>[ 5 ]
 ```
 
 The function accepts the following arguments:
@@ -108,7 +99,6 @@ By default, the function performs a reduction over all elements in a provided [`
 
 ```javascript
 var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Create an input ndarray:
 var x = array( [ [ [ 1.0, 2.0 ] ], [ [ 3.0, 4.0 ] ], [ [ 0.0, 6.0 ] ] ] );
@@ -118,17 +108,13 @@ var x = array( [ [ [ 1.0, 2.0 ] ], [ [ 3.0, 4.0 ] ], [ [ 0.0, 6.0 ] ] ] );
 var out = countTruthy( x, {
     'dims': [ 1, 2 ]
 });
-// returns <ndarray>
-
-var v = ndarray2array( out );
-// returns [ 2, 2, 1 ]
+// returns <ndarray>[ 2, 2, 1 ]
 ```
 
 By default, the function returns an [`ndarray`][@stdlib/ndarray/ctor] having a shape matching only the non-reduced dimensions of the input [`ndarray`][@stdlib/ndarray/ctor] (i.e., the reduced dimensions are dropped). To include the reduced dimensions as singleton dimensions in the output [`ndarray`][@stdlib/ndarray/ctor], set the `keepdims` option to `true`.
 
 ```javascript
 var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Create an input ndarray:
 var x = array( [ [ [ 1.0, 2.0 ] ], [ [ 3.0, 4.0 ] ], [ [ 0.0, 6.0 ] ] ] );
@@ -139,10 +125,7 @@ var out = countTruthy( x, {
     'dims': [ 1, 2 ],
     'keepdims': true
 });
-// returns <ndarray>
-
-var v = ndarray2array( out );
-// returns [ [ [ 2 ] ], [ [ 2 ] ], [ [ 1 ] ] ]
+// returns <ndarray>[ [ [ 2 ] ], [ [ 2 ] ], [ [ 1 ] ] ]
 ```
 
 #### countTruthy.assign( x, out\[, options] )
@@ -164,13 +147,10 @@ var y = empty( [], {
 
 // Perform reduction:
 var out = countTruthy.assign( x, y );
-// returns <ndarray>
+// returns <ndarray>[ 5 ]
 
 var bool = ( out === y );
 // returns true
-
-var v = y.get();
-// returns 5
 ```
 
 The function accepts the following arguments:
@@ -188,7 +168,6 @@ By default, the function performs a reduction over all elements in a provided [`
 ```javascript
 var array = require( '@stdlib/ndarray-array' );
 var empty = require( '@stdlib/ndarray-empty' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Create an input ndarray:
 var x = array( [ [ [ 1.0, 2.0 ] ], [ [ 3.0, 4.0 ] ], [ [ 0.0, 6.0 ] ] ] );
@@ -203,12 +182,10 @@ var y = empty( [ 3 ], {
 var out = countTruthy.assign( x, y, {
     'dims': [ 1, 2 ]
 });
+// returns <ndarray>[ 2, 2, 1 ]
 
 var bool = ( out === y );
 // returns true
-
-var v = ndarray2array( y );
-// returns [ 2, 2, 1 ]
 ```
 
 </section>
@@ -227,13 +204,8 @@ var v = ndarray2array( y );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var bernoulli = require( '@stdlib/random-base-bernoulli' ).factory;
 var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var fillBy = require( '@stdlib/ndarray-fill-by' );
 var zeros = require( '@stdlib/ndarray-zeros' );
@@ -297,11 +269,6 @@ y = countTruthy( x, {
 });
 console.log( 'countTruthy(x[:,:,:]) =' );
 console.log( ndarray2array( y ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -366,8 +333,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -386,7 +353,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-count-truthy/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
 <!-- <related-links> -->
 
