@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-24)
+## Unreleased (2025-12-26)
 
 <section class="features">
 
@@ -32,6 +32,7 @@
 
 <details>
 
+-   [`daf2cc8`](https://github.com/stdlib-js/stdlib/commit/daf2cc847c77117f4c5ae4e5e99ae224bb592edc) - **refactor:** add writable parameter to `ndarray/base/spread-dimensions` [(#9370)](https://github.com/stdlib-js/stdlib/pull/9370) _(by Muhammad Haris, Athan Reines)_
 -   [`9705997`](https://github.com/stdlib-js/stdlib/commit/970599728ed2c51b399d1a97aa567c47bfc7085e) - **docs:** improve doctests for ndarray instances in `ndarray/count-truthy` [(#9340)](https://github.com/stdlib-js/stdlib/pull/9340) _(by Lokesh Ranjan, Athan Reines)_
 -   [`67f4feb`](https://github.com/stdlib-js/stdlib/commit/67f4feb3b59fc5466e8302977634d3d5113467a8) - **style:** remove space _(by Athan Reines)_
 -   [`6f6da0a`](https://github.com/stdlib-js/stdlib/commit/6f6da0afaa12ef31691ae659f6a005f140d81cd1) - **fix:** add missing argument to format strings _(by Philipp Burckhardt)_
@@ -50,10 +51,11 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Lokesh Ranjan
+-   Muhammad Haris
 -   Philipp Burckhardt
 
 </section>
