@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-26)
+## Unreleased (2026-01-10)
 
 <section class="features">
 
@@ -32,6 +32,7 @@
 
 <details>
 
+-   [`426da6e`](https://github.com/stdlib-js/stdlib/commit/426da6ec175dfdb72a9435612069bd5e2819b194) - **test:** add tests to `ndarray/count-truthy` for complete test code coverage [(#9593)](https://github.com/stdlib-js/stdlib/pull/9593) _(by Muhammad Haris, Athan Reines)_
 -   [`daf2cc8`](https://github.com/stdlib-js/stdlib/commit/daf2cc847c77117f4c5ae4e5e99ae224bb592edc) - **refactor:** add writable parameter to `ndarray/base/spread-dimensions` [(#9370)](https://github.com/stdlib-js/stdlib/pull/9370) _(by Muhammad Haris, Athan Reines)_
 -   [`9705997`](https://github.com/stdlib-js/stdlib/commit/970599728ed2c51b399d1a97aa567c47bfc7085e) - **docs:** improve doctests for ndarray instances in `ndarray/count-truthy` [(#9340)](https://github.com/stdlib-js/stdlib/pull/9340) _(by Lokesh Ranjan, Athan Reines)_
 -   [`67f4feb`](https://github.com/stdlib-js/stdlib/commit/67f4feb3b59fc5466e8302977634d3d5113467a8) - **style:** remove space _(by Athan Reines)_
