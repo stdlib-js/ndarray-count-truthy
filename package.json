@@ -57,9 +57,9 @@
     "@stdlib/ndarray-ndims": "^0.2.2",
     "@stdlib/ndarray-shape": "^0.2.2",
     "@stdlib/object-assign": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/string-format": "^0.2.3",
     "@stdlib/types": "^0.4.3",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
@@ -69,8 +69,8 @@
     "@stdlib/math-base-special-pow": "^0.3.0",
     "@stdlib/math-base-special-sqrt": "^0.2.2",
     "@stdlib/ndarray-base-shape2strides": "^0.2.2",
-    "@stdlib/ndarray-ctor": "^0.2.2",
-    "@stdlib/ndarray-fill-by": "github:stdlib-js/ndarray-fill-by#main",
+    "@stdlib/ndarray-ctor": "^0.3.0",
+    "@stdlib/ndarray-fill-by": "^0.1.0",
     "@stdlib/ndarray-to-array": "^0.2.1",
     "@stdlib/ndarray-zeros": "^0.3.0",
     "@stdlib/random-array-discrete-uniform": "^0.2.1",
