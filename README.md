@@ -50,7 +50,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-countTruthy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-count-truthy@umd/browser.js' )
+countTruthy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-count-truthy@v0.1.1-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -62,7 +62,7 @@ var countTruthy = require( 'path/to/vendor/umd/ndarray-count-truthy/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-count-truthy@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-count-truthy@v0.1.1-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
